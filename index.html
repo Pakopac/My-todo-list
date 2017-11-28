@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .column{
+                float: left;
+                width: 100px;
+                height: 200px;
+                border: 1px solid black;
+                margin-left: 50px;
+                margin-bottom: 50px;
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                document.querySelector('#add').onclick = function(){
+                    var addcolumns = document.createElement("div");
+                    document.body.appendChild(addcolumns);
+                    addcolumns.classList.add("column");
+                };
+            }
+        </script>
+    </head>
+    <body>
+    <button id="add">ajouter une colonne</button>
+    <br>
+    <div id="columns"></div>
+    </body>
+</html>
