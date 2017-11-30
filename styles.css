@@ -1,8 +1,19 @@
 .column{
     float: left;
-    width: 100px;
-    height: 200px;
+    width: 200px;
+    height: 300px;
     border: 1px solid black;
     margin-left: 50px;
     margin-bottom: 50px;
+    background-color: #00ff00;
+}
+
+.delete {
+	border: solid black 1px;
+	position: relative;
+	top: -51px;
+}
+
+p {
+	text-align: center;
 }
