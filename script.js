@@ -20,9 +20,9 @@ window.onload = function(){
         var task = document.querySelectorAll('.column');
         var button = document.querySelectorAll('.delete');
         for (var i = 0; i < task.length; i++) {
-             button[i].addEventListener('click', remove, false);
+            button[i].addEventListener('click', remove, false);
         }
 
-	};
+    };
 
 };
