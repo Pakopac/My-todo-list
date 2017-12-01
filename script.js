@@ -6,13 +6,18 @@ window.onload = function(){
 
         var addTitle = document.createElement("p");
         var addDelete = document.createElement("button");
+        var addText = document.createElement("input");
+        var addDescription = document.createElement("textarea");
         addcolumns.appendChild(addTitle);
         addcolumns.appendChild(addDelete);
-        var text = document.createTextNode('titre');
+        addcolumns.appendChild(addText)
+        addcolumns.appendChild(addDescription);
+        var text = document.createTextNode('task');
         var exit = document.createTextNode('X');
         addTitle.appendChild(text);
         addDelete.appendChild(exit);
         addDelete.classList.add("delete");
+        addText.classList.add("name");
 
         function remove() {
             this.parentNode.parentNode.removeChild(this.parentNode);
