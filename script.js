@@ -6,18 +6,26 @@ window.onload = function(){
 
         var addTitle = document.createElement("p");
         var addDelete = document.createElement("button");
-        var addText = document.createElement("input");
-        var addDescription = document.createElement("textarea");
+        var addTable = document.createElement("button");
+        var addPopup = document.createElement("div");
+        var link = document.createElement("a");
+        var deletePopup = document.createElement("div");
+        link.setAttribute("href", "#link");
         addcolumns.appendChild(addTitle);
         addcolumns.appendChild(addDelete);
-        addcolumns.appendChild(addText)
-        addcolumns.appendChild(addDescription);
+        addcolumns.appendChild(addTable);
+        addcolumns.appendChild(addPopup);
+        addcolumns.appendChild(link);
+        addPopup.appendChild(deletePopup);
         var text = document.createTextNode('task');
         var exit = document.createTextNode('X');
+        var buttonAddTable = document.createTextNode('Add Table');
         addTitle.appendChild(text);
         addDelete.appendChild(exit);
+        addTable.appendChild(buttonAddTable);
+        link.appendChild(addTable);
         addDelete.classList.add("delete");
-        addText.classList.add("name");
+        addTable.classList.add("btnAddTable");
 
         function remove() {
             this.parentNode.parentNode.removeChild(this.parentNode);
