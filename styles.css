@@ -34,20 +34,9 @@
     top: -48px;
     margin-left: 170px;
 }
-p {
-    text-align: center;
-}
-.name, textarea {
-	border-radius: 10px;
-	margin: 12px;
-}
 .name {
 	margin-bottom: 10%;
 	text-align: center;
-}
-
-textarea {
-	height: 100px;
 }
 .btnAddTable{
     margin-left: 25px;
@@ -64,14 +53,49 @@ textarea {
 #link:target{
     display: block;
 }
+.newTaskTitle{
+    font-size: 30px;
+    font-weight: bold;
+}
+.leavePopup{
+    margin-left: 90%;
+    background-color: white;
+    border: 1px solid white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
 .popup{
     background: #fff;
     padding: 20px;
     border: 20px solid #ddd;
     position: relative;
-    margin: 10% auto;
-    width: 50%;
-    height:300px;
+    margin: 5% auto;
+    width: 60%;
     box-shadow: 0px 0px 20px #000;
     border-radius: 10px;
+}
+textarea{
+    margin-left: 10%;
+    width: 80%;
+    height: 100px;
+    margin-top: 40px;
+}
+.newTaskTitle, .inputTitle {
+    text-align: center;
+}
+.inputTitle{
+    width: 40%;
+    margin-left: 30%;
+    height: 30px;
+}
+.btnCreate{
+    margin-left: 42%;
+    margin-top: 20px;
+    width: 15%;
+    height: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid green;
+    cursor: pointer;
 }
