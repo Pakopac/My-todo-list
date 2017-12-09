@@ -53,5 +53,11 @@ window.onload = function(){
         }
 
     };
-
+    var inputTitle = document.querySelector('.inputTitle');
+    var description = document.querySelector('.description');
+    var buttonCreate = document.querySelector('.btnCreate');
+    buttonCreate.onclick = function clearFields() {
+        inputTitle.value = '';
+        description.value = '';
+    }
 };
