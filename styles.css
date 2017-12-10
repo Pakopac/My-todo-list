@@ -1,13 +1,23 @@
+body{
+    background-color: rgba(79, 148, 148, 0.55);
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
 #add{
+    font-size: 25px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 200px;
     height: 50px;
     font-weight: bold;
-    background-color: #e8e8e8;
-    border: 3px solid green;
+    background-color: rgba(53, 148, 114, 0.41);
+    border: 3px solid #ddd;
     margin-top: 40px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 #columns{
     display: flex;
@@ -16,32 +26,39 @@
     height: 500px;
 }
 .column{
+    display: flex;
     align-self: center;
     min-width: 200px;
     min-height: 400px;
-    border: 1px solid black;
+    border: 3px solid #ddd;
     margin-left: 50px;
-    background-color: #00aa00;
-    display: flex;
+    background-color: #4dc466;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .delete {
-    font-size: 20px;
-    background-color: #00aa00;
+    font-size: 25px;
+    background-color: #4dc466;
     border: 0px;
     position: relative;
-    top: -48px;
     margin-left: 170px;
+    cursor: pointer;
+    font-weight: bold;
 }
 .name {
     margin-bottom: 10%;
     text-align: center;
 }
 .btnAddTable{
+    background-color: #4dc466;
+    border: 3px solid #ddd;
+    border-radius: 15px;
     margin-left: 25px;
     width: 150px;
-    height: 30px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
 }
 #link{
     display: none;
@@ -58,16 +75,17 @@
     font-weight: bold;
 }
 .leavePopup{
+    font-size: 30px;
     margin-left: 90%;
-    background-color: white;
-    border: 1px solid white;
+    background-color: rgb(53, 148, 114);
+    border: 1px solid rgb(53, 148, 114);
     width: 30px;
     height: 30px;
     cursor: pointer;
     font-weight: bold;
 }
 .popup{
-    background: #fff;
+    background-color: #359472;
     padding: 20px;
     border: 20px solid #ddd;
     position: relative;
@@ -75,13 +93,15 @@
     width: 60%;
     box-shadow: 0px 0px 20px #000;
     border-radius: 10px;
+    height: 70%;
 }
 textarea{
     margin-left: 10%;
     width: 80%;
-    height: 100px;
+    height: 200px;
     margin-top: 40px;
     max-width: 80%;
+    max-height: 70%;
 }
 .newTaskTitle, .inputTitle {
     text-align: center;
@@ -99,4 +119,10 @@ textarea{
     background-color: #f2f2f2;
     border: 1px solid green;
     cursor: pointer;
+}
+.title{
+    font-size: 30px;
+    margin-left: 20px;
+   text-align: center;
+    max-width: 160px;
 }

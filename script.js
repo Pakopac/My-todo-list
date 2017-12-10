@@ -9,8 +9,8 @@ window.onload = function(){
 
 
 
-        var addTitle = createElementFunction('p');
         var addDelete = document.createElement("button");
+        var addTitle = createElementFunction('p');
         var addTable = document.createElement("button");
         var addPopup = document.createElement("div");
         var link = document.createElement("a");
@@ -18,8 +18,9 @@ window.onload = function(){
         var popup = document.querySelector('.popup');
         link.setAttribute("href", "#link");
         linkBack.setAttribute("href", "index.html");
-        addcolumns.appendChild(addTitle);
+        addTitle.setAttribute("contenteditable", "true");
         addcolumns.appendChild(addDelete);
+        addcolumns.appendChild(addTitle);
         addcolumns.appendChild(addTable);
         addcolumns.appendChild(addPopup);
         addcolumns.appendChild(link);
@@ -34,6 +35,7 @@ window.onload = function(){
         link.appendChild(addTable);
         addDelete.classList.add("delete");
         addTable.classList.add("btnAddTable");
+        addTitle.classList.add("title");
 
 
         var close = document.querySelectorAll('.delete');
