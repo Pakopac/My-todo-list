@@ -1,18 +1,13 @@
 window.onload = function(){
-    document.querySelector('#add').onclick = function(){
+    document.querySelector('#add').onclick = function() {
         var addcolumns = document.createElement("div");
         document.getElementById('columns').appendChild(addcolumns);
         addcolumns.classList.add("column");
-        function createElementFunction( typeElem) {
-            return document.createElement(typeElem);
-        }
-
 
 
         var addDelete = document.createElement("button");
-        var addTitle = createElementFunction('p');
+        var addTitle = document.createElement('span');
         var addTable = document.createElement("button");
-        var addPopup = document.createElement("div");
         var link = document.createElement("a");
         var linkBack = document.createElement("a");
         var popup = document.querySelector('.popup');
@@ -22,13 +17,11 @@ window.onload = function(){
         addcolumns.appendChild(addDelete);
         addcolumns.appendChild(addTitle);
         addcolumns.appendChild(addTable);
-        addcolumns.appendChild(addPopup);
         addcolumns.appendChild(link);
         popup.appendChild(linkBack);
         var text = document.createTextNode('task');
         var exit = document.createTextNode('X');
         var buttonAddTable = document.createTextNode('Add Table');
-        var exitPopup = document.createTextNode('X');
         addTitle.appendChild(text);
         addDelete.appendChild(exit);
         addTable.appendChild(buttonAddTable);
@@ -40,26 +33,42 @@ window.onload = function(){
 
         var close = document.querySelectorAll('.delete');
         for (var i = 0; i < close.length; i++) {
-            close[i].onclick = function() {
+            close[i].onclick = function remove() {
                 var div = this.parentElement;
                 this.parentElement.remove(div);
             };
         }
 
-        var removePopup = document.querySelectorAll('.deletePopup');
-        for (var j = 0; j < removePopup.length; j++ ) {
-            removePopup[j].onclick = function() {
-                var div = this.parentElement;
-                div.style.display = "none";
+        var btnTable = document.querySelectorAll('.btnAddTable');
+        var inputTitle = document.querySelector('.inputTitle');
+        var description = document.querySelector('.description');
+        var takeColumn = document.querySelectorAll('.column');
+        for (var j = 0; j < takeColumn.lenght; j++ ) {
+        };
+        for (var i = 0; i < btnTable.length; i++) {
+            btnTable[i].onclick = function clearFields() {
+                var createTable = document.createElement("div");
+                takeColumn[j].append(createTable);
+                createTable.classList.add("Table");
+                inputTitle.value = '';
+                description.value = '';
+                var create = document.querySelector('.btnCreate');
+                var AllTable = document.querySelectorAll('.Table');
+                create.onclick = function createNewTable() {
+                    createTable.style.display = "block";
+                    createTable.innerHTML = '<span class="title">' + inputTitle.value + '<br><span class ="descr">' + description.value;
+                       createTable.appendChild(addDelete);
+
+                };
             };
-        }
+        };
+
 
     };
-    var inputTitle = document.querySelector('.inputTitle');
-    var description = document.querySelector('.description');
-    var buttonCreate = document.querySelector('.btnCreate');
-    buttonCreate.onclick = function clearFields() {
-        inputTitle.value = '';
-        description.value = '';
-    }
+
+
+
+
+
+
 };
