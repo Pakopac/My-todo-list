@@ -1,8 +1,23 @@
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("dragged-id", ev.target.className);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("dragged-id");
+    ev.target.appendChild(document.getElementsByClassName(data)[0]);
+}
 window.onload = function(){
     document.querySelector('#add').onclick = function() {
         var addcolumns = document.createElement("div");
         document.getElementById('columns').appendChild(addcolumns);
         addcolumns.classList.add("column");
+        addcolumns.setAttribute("ondrop","drop(event)")
+        addcolumns.setAttribute("ondragover","allowDrop(event)")
 
 
         var addDelete = document.createElement("button");
@@ -45,10 +60,13 @@ window.onload = function(){
 
 
         for (var i = 0; i < btnChange.length; i++){
+
         };
             btnTable[i].onclick = function NewTable() {
                 var createTable = document.createElement("div");
                 createTable.classList.add("Table");
+                createTable.setAttribute("draggable","true");
+                createTable.setAttribute("ondragstart","drag(event)");
                 var createInputTitle = document.createElement("input");
                 createInputTitle.setAttribute("type", "text");
                 createInputTitle.classList.add("inputTitle");
