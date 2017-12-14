@@ -11,7 +11,24 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("dragged-id");
     ev.target.appendChild(document.getElementsByClassName(data)[0]);
 }
+
+function addOnLS(rowTitle) {
+    var arrayRows = JSON.parse(localStorage.getItem("savedTask"));
+    arrayRows[rowTitle] = {};
+    var row = localStorage.setItem("savedTask", JSON.stringify(arrayRows));
+}
+function saveTask() {
+    return JSON.parse(localStorage.getItem("savedTask"));
+}
+
 window.onload = function(){
+    if (localStorage.getItem("savedTask") == null) {
+        var arr = {};
+        localStorage.setItem("savedTask", JSON.stringify(arr));
+    } else {
+        console.log(saveTask());
+    }
+
     document.querySelector('#add').onclick = function newColomn() {
         var addcolumns = document.createElement("div");
         document.getElementById('columns').appendChild(addcolumns);
@@ -41,6 +58,8 @@ window.onload = function(){
         addDelete.classList.add("delete");
         addTable.classList.add("btnAddTable");
         addTitle.classList.add("titleTask");
+
+        addOnLS(addTitle);
 
 
         var close = document.querySelectorAll('.delete');
