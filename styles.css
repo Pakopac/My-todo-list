@@ -19,6 +19,9 @@ a{
     border-radius: 10px;
     cursor: pointer;
 }
+#add:hover{
+    background-color: rgba(24, 83, 43, 0.75);
+}
 #columns{
     display: flex;
     flex-direction: row;
@@ -47,6 +50,9 @@ a{
     cursor: pointer;
     font-weight: bold;
 }
+.delete:hover{
+    font-size: 40px;
+}
 .name {
     margin-bottom: 10%;
     text-align: center;
@@ -61,6 +67,9 @@ a{
     height: 40px;
     font-size: 20px;
     cursor: pointer;
+}
+.btnAddTable:hover{
+    background-color: #004b00;
 }
 #link{
     display: none;
@@ -86,6 +95,9 @@ a{
     cursor: pointer;
     font-weight: bold;
 }
+.leavePopup:hover{
+    font-size: 40px;
+}
 .popup{
     text-align: center;
     background-color: #359472;
@@ -96,7 +108,7 @@ a{
     width: 60%;
     box-shadow: 0px 0px 20px #000;
     border-radius: 10px;
-    height: 70%;
+    height: 80%;
 }
 .inputDescription{
     border-radius: 10px;
@@ -144,6 +156,9 @@ a{
     margin-bottom: 10px;
     width: 200px;
 }
+.Table:hover{
+    background-color: #004b00;
+}
 .descr{
     font-size: 20px;
 }
@@ -153,6 +168,14 @@ a{
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
+}
+.createButton:hover{
+    font-size: 20px;
+    width: 70px;
+    height: 30px;
+    background-color: #004b00;
+    color: #ffffff;
 }
 .task{
     font-size: 50px;
@@ -183,4 +206,7 @@ a{
     background: #f2f2f2;
     border-radius: 10px;
     font-size: 30px;
+}
+.btnChange:hover{
+    background-color: #004500;
 }
