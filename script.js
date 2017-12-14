@@ -26,15 +26,15 @@ window.onload = function(){
         var arr = {};
         localStorage.setItem("savedTask", JSON.stringify(arr));
     } else {
-        console.log(saveTask());
+        saveTask();
     }
 
     document.querySelector('#add').onclick = function newColomn() {
         var addcolumns = document.createElement("div");
         document.getElementById('columns').appendChild(addcolumns);
         addcolumns.classList.add("column");
-        addcolumns.setAttribute("ondrop","drop(event)")
-        addcolumns.setAttribute("ondragover","allowDrop(event)")
+        addcolumns.setAttribute("ondrop","drop(event)");
+        addcolumns.setAttribute("ondragover","allowDrop(event)");
 
 
         var addDelete = document.createElement("button");
@@ -42,7 +42,6 @@ window.onload = function(){
         var addTable = document.createElement("button");
         var link = document.createElement("a");
         var linkBack = document.createElement("a");
-        var popup = document.querySelector('.popup');
         link.setAttribute("href", "#link");
         linkBack.setAttribute("href", "#");
         addTitle.setAttribute("contenteditable", "true");
@@ -59,7 +58,7 @@ window.onload = function(){
         addTable.classList.add("btnAddTable");
         addTitle.classList.add("titleTask");
 
-        addOnLS(addTitle);
+        addOnLS(addcolumns);
 
 
         var close = document.querySelectorAll('.delete');
@@ -119,9 +118,8 @@ window.onload = function(){
                             '</span><br><input type="text" class="titlePopUp" value="' + createInputTitle.value + '"><br><textarea class="descriptionPopUp">'
                             + createdescription.value + '</textarea><br><a href="#"><button class="btnChange">Change</button></a>';
 
+                        var btnChange = document.querySelector('.btnChange');
                         btnChange.onclick = function changeTable() {
-                            console.log('ok');
-                            createTable.innerHTML = "";
                             var titlePopUp = document.querySelector('.titlePopUp');
                             var descriptionPopUp = document.querySelector('.descriptionPopUp');
                             var title = document.querySelector('.title');
